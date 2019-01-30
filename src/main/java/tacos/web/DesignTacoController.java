@@ -48,4 +48,11 @@ import tacos.Ingredient.Type;
 
             return "design";
     }
+    private List<Ingredient> filterByType(
+    <Ingredient> ingredients, Type type) {
+        return ingredients
+                .stream()
+                .filter(x -> x.getType().equals(type))
+                .collect(Collectors.toList());
+    }
 }
